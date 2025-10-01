@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import colors from "colors";
-import { getEnv } from "../middleware/env";
+import { getEnv } from "../utils/env";
 
 export const connectDB = async () => {
   try {

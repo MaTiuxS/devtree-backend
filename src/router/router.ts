@@ -1,6 +1,7 @@
 import { Router } from "express";
-import { createAccount } from "../handlers";
+import { createAccount, login } from "../handlers";
 import { body } from "express-validator";
+import { handleinputErrors } from "../middleware/validation";
 
 const router: Router = Router();
 
@@ -21,7 +22,16 @@ router.post(
     .withMessage("La contraseña debe contener al menos un número")
     .matches(/[\W_]/)
     .withMessage("La contraseña debe contener al menos un carácter especial"),
+  handleinputErrors,
   createAccount
+);
+
+router.post(
+  "/auth/login",
+  body("email").isEmail().withMessage("El email no es valido"),
+  body("password").notEmpty().withMessage("La contraseña es obligatoria"),
+  handleinputErrors,
+  login
 );
 
 export default router;
