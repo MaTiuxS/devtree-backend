@@ -1,5 +1,7 @@
 export const getEnv = (key: string): string => {
   const value = process.env[key];
-  if (!value) throw new Error(`Variable de entorno ${key} no definida`);
+  if (!value) {
+    throw new Error(`La variable de entorno ${key} no está definida`);
+  }
   return value;
 };

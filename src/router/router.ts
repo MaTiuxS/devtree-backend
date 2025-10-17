@@ -1,7 +1,16 @@
 import { Router } from "express";
-import { createAccount, login } from "../handlers";
+import {
+  createAccount,
+  getUser,
+  getUserByHandle,
+  login,
+  searchByHandle,
+  updateProfile,
+  uploadImage,
+} from "../handlers";
 import { body } from "express-validator";
 import { handleinputErrors } from "../middleware/validation";
+import { authenticate } from "../middleware/auth";
 
 const router: Router = Router();
 
@@ -32,6 +41,29 @@ router.post(
   body("password").notEmpty().withMessage("La contraseña es obligatoria"),
   handleinputErrors,
   login
+);
+
+router.get("/user", authenticate, getUser);
+router.patch(
+  "/user",
+  body("handle").notEmpty().withMessage("El handle no puede ir vacio"),
+  body("description")
+    .notEmpty()
+    .withMessage("La descripcion no puede ir vacia"),
+  handleinputErrors,
+  authenticate,
+  updateProfile
+);
+
+router.post("/user/image", authenticate, uploadImage);
+
+router.get("/:handle", getUserByHandle);
+
+router.post(
+  "/search",
+  body("handle").notEmpty().withMessage("El handle no puede ir vacio"),
+  handleinputErrors,
+  searchByHandle
 );
 
 export default router;
