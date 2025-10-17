@@ -22,23 +22,7 @@ Esta API gestiona usuarios, enlaces y datos del sistema de manera **segura**, **
 
 ## 🧠 Estructura del proyecto
 
-backend-devtree/
-├── src/
-│ ├── config/ # Configuraciones generales (Cloudinary, CORS, DB, etc.)
-│ ├── handlers/ # Controladores principales
-│ ├── middleware/ # Middlewares de autenticación y validación
-│ ├── models/ # Modelos de Mongoose
-│ ├── router/ # Rutas del backend
-│ ├── utils/ # Funciones auxiliares (JWT, manejo de env, etc.)
-│ ├── server.ts # Punto de entrada del servidor
-│ └── index.ts # Archivo principal de inicialización
-│
-├── .env.template # Ejemplo de variables de entorno
-├── nodemon.json # Configuración de desarrollo
-├── package.json # Configuración del proyecto
-├── pnpm-lock.yaml # Bloqueo de dependencias
-├── tsconfig.json # Configuración de TypeScript
-└── README.md
+![alt text](image.png)
 
 
 
@@ -46,7 +30,7 @@ backend-devtree/
 
 1. **Clona el repositorio**
    ```bash
-   git clone https://github.com/tuusuario/backend-devtree.git
+   https://github.com/MaTiuxS/devtree-backend.git
    cd backend-devtree
 
 2. Instala las dependencias
