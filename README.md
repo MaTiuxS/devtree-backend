@@ -42,11 +42,11 @@ Esta API gestiona usuarios, enlaces y datos del sistema de manera **segura**, **
     pnpm run dev
 
 ## 🎨 Características principales
-✅ Autenticación con JWT
-✅ Registro y login de usuarios
-✅ Subida de imágenes a Cloudinary
-✅ Drag & Drop con Dnd Kit para organizar enlaces
-✅ Interfaz moderna con Tailwind CSS v4
-✅ Validación de formularios con React Hook Form + Zod
-✅ Consumo del backend con Axios
-✅ Compatible con dispositivos móviles
+* ✅ Autenticación con JWT
+* ✅ Registro y login de usuarios
+* ✅ Subida de imágenes a Cloudinary
+* ✅ Drag & Drop con Dnd Kit para organizar enlaces
+* ✅ Interfaz moderna con Tailwind CSS v4
+* ✅ Validación de formularios con React Hook Form + Zod
+* ✅ Consumo del backend con Axios
+* ✅ Compatible con dispositivos móviles
