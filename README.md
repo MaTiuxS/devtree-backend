@@ -22,7 +22,7 @@ Esta API gestiona usuarios, enlaces y datos del sistema de manera **segura**, **
 
 ## 🧠 Estructura del proyecto
 
-![alt text](image.png)
+<img width="523" height="470" alt="Captura de pantalla 2025-10-16 215358" src="https://github.com/user-attachments/assets/4c9f883a-d707-49dd-a98a-be37c36fb9e1" />
 
 
 
